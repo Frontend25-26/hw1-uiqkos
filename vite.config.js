@@ -2,9 +2,11 @@ import { defineConfig } from 'vite'
 
 import { REPO_NAME } from './config'
 
-export default defineConfig({
+export default defineConfig(({mode}) => {
+  const isDev = mode == 'development'
+  return {
     root: './src',
-    base: `/${REPO_NAME}/`,
+    base: isDev ? '/' : `https://frontend25-26.github.io/${REPO_NAME}/`,
     server: {
       open: true,
       port: 3030,
@@ -17,4 +19,5 @@ export default defineConfig({
       environment: 'jsdom',
       setupFiles: './tests/setup.js'
     }
+  }
 })

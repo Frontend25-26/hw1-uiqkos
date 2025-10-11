@@ -1,6 +1,24 @@
-body {
-    margin: 0;
-    padding: 0;
+* {
+    cursor: url('./cat-small.png') 32 32, auto;
+}
 
-    background: #292929;
+body {
+    margin: 10px;
+    background: #F7E3FE;
+}
+
+main {
+    display: flex;
+    gap: 20px;
+}
+
+article {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+article img {
+    max-width: 80px;
+    max-height: 80px;
 }
